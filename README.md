@@ -4,11 +4,11 @@
 
 The _libYAML_ library was written by Kirill Simonov <xi@resolvent.net> and is currently maintained by the YAML community. It was
 originally developed for _Python Software Foundation_ as a part of _Google Summer of Code_ under the mentorship of _Clark Evans_.
-Our local copy is essentially the original code with minor updates. 
 
-**Important.** This is a _private_ dupplicate of the _official_ [LibYAML project]. It was initiated at a time when the GitHub
-repository appeared to little to no activity. As the AIT framework intensively relies on this library we decided to create this
-repository while continuously monitoring the upstream master repository (see [how this repository was setup][] below.
+**Important.** This is a fork of the _official_ [LibYAML project][libyaml]. It was initiated at a time when the original project
+appeared to have little to no activity. As the AIT framework intensively relies on this library we decided to do a bare bones
+fork which could evolve by its own while continuously monitoring the upstream master repository
+(see [how this repository was setup][setup] below).
 
 #### Build from source
 
@@ -33,26 +33,16 @@ repository while continuously monitoring the upstream master repository (see [ho
 -   IRC: `#libyaml` @ _irc.freenode.net_.
 -   Mailing list: [YAML-Core][yaml-core]
 
+<a name="setup"></a>
+
 #### How this repository was setup
 
+The repositories:
 
+-   [yaml/libyaml][libyaml] is the _upstream_ repository we want to monitor
+-   [ISLEcode/ait-libyaml][aityaml] is the _origin_ repository where we manage _our_ copy of the C library
 
-Open Source projects have varying life cycles; many interesting projects have not been updated in year. In some cases it is
-important to maintain a copy (and not a fork) of the project locally while monitoring changes made to the _upstream_ project.
-
-What I describe here is how I perform such setups when the project we want to monitor is maintained as a git repository. As a
-practica example we are going to examine a real world example: the [libyaml] C library. This is an essential component of the
-AIT framework and the library has had little to no activity during the last years[^1].
-
-Our setup is as follows:
-
--   [yaml/libyaml] is the upstream repository we want to monitor
--   [ISLEcode/ait-libyaml] is the _origin_ repository where we manage _our_ copy of the C library
-
-
-
-Though I have seen activity and new releases recently. Which exemplifies why we want to keep monitoring the originating
-repository.
+The working instructions:
 
 1.  Create empty GitHub repository (_ISLEcode/ait-libyaml_).
 
@@ -90,17 +80,22 @@ repository.
     git pull upstream master
     ```
 
-[Learn Git branching]: https://pcottle.github.io/learnGitBranching/
-[A hacker's guide to Git]: https://wildlyinaccurate.com/a-hackers-guide-to-git
+See also:
+
+-   [Learn Git branching][git-branching]
+-   [A hacker's guide to Git][git-hacker]
 
 <!-- # Bookmarks -->
 
-  [libyaml]: https://github.com/yaml/libyaml
-  [libyaml-issues]: https://github.com/yaml/libyaml/issues
   [aityaml-issues]: https://github.com/ISLEcode/ait-libyaml/issues
-  [ci-ubuntu]: https://github.com/ISLEcode/ait-libyaml/workflows/Ubuntu/badge.svg
+  [aityaml]: https://github.com/ISLEcode/ait-libyaml
   [ci-centos]: https://github.com/ISLEcode/ait-libyaml/workflows/CentOS/badge.svg
   [ci-macos]: https://github.com/ISLEcode/ait-libyaml/workflows/macOS/badge.svg
+  [ci-ubuntu]: https://github.com/ISLEcode/ait-libyaml/workflows/Ubuntu/badge.svg
+  [git-branching]: https://pcottle.github.io/learnGitBranching/
+  [git-hacker]: https://wildlyinaccurate.com/a-hackers-guide-to-git
+  [libyaml-issues]: https://github.com/yaml/libyaml/issues
+  [libyaml]: https://github.com/yaml/libyaml
   [yaml-core]: http://lists.sourceforge.net/lists/listinfo/yaml-core
 
 <!-- vim: set digraph nospell :-->

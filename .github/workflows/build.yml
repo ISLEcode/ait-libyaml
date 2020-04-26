@@ -19,7 +19,4 @@ jobs:
       run: ./configure --prefix=/opt/ait
     - name: make
       run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+

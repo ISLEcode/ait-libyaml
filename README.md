@@ -8,7 +8,7 @@ originally developed for _Python Software Foundation_ as a part of _Google Summe
 **Important.** This is a fork of the _official_ [LibYAML project][libyaml]. It was initiated at a time when the original project
 appeared to have little to no activity. As the AIT framework intensively relies on this library we decided to do a bare bones
 fork which could evolve by its own while continuously monitoring the upstream master repository
-(see [how this repository was setup][setup] below).
+(see "_How this repository was setup_" below).
 
 #### Build from source
 
@@ -32,8 +32,6 @@ fork which could evolve by its own while continuously monitoring the upstream ma
 -   Issues: [AIT related][aityaml-issues] or specific to [libyaml][libyaml-issues].
 -   IRC: `#libyaml` @ _irc.freenode.net_.
 -   Mailing list: [YAML-Core][yaml-core]
-
-<a name="setup"></a>
 
 #### How this repository was setup
 

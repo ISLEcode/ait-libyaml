@@ -13,10 +13,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: bootstrap
-      run: ./bootstrap
-    - name: configure
-      run: ./configure --prefix=/opt/ait
-    - name: make
-      run: make
+#   - name: bootstrap
+#     run: ./bootstrap
+#   - name: configure
+#     run: ./configure --prefix=/opt/ait
+#   - name: make
+#     run: make
 
